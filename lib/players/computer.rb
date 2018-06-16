@@ -2,8 +2,8 @@ module Players
   class Computer < Player
 
     def move(board)
-      if !board.taken?(5) 
-        move = "5" 
+      if !board.taken?(5)
+        move = "5"
       elsif board.taken?(5) && !board.taken?(1)
         move = "1"
       elsif board.taken?(5) && board.taken?(1) && !board.taken?(3)
@@ -13,6 +13,8 @@ module Players
       else
         move = "9"
       end
+
+      
     end
 
   end
