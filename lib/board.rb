@@ -27,9 +27,9 @@ class Board
   end
 
   def turn_count
-    @cells.map { |x|
+    @cells.count { |x|
       x == "O" || x == "X"
-    }.count(true)
+    }
   end
 
   def taken?(input)
