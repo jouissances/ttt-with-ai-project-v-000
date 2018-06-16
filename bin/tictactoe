@@ -34,7 +34,7 @@ def start
       game.play
     else
       puts "Please try again!"
-      welcome
+      start
     end
   elsif input == 3
     board = Board.new
