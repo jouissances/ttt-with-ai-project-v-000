@@ -7,11 +7,7 @@ module Players
         move = "5"
 
       # If going second and the middle square is taken, take the upper-left corner square.
-      elsif board.turn_count == 1
-        move = "1"
-
-      # If you went first (and took the middle), take a corner square with your second move.
-      elsif board.turn_count == 2
+      elsif board.turn_count == 1 || board.turn_count == 2
         move = [1, 3, 7, 9].detect { |i|
           !board.taken?(i)
         }.to_s
