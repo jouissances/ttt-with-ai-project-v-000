@@ -5,9 +5,7 @@ module Players
       if !board.taken?(5)
         move = "5"
       elsif board.taken?(5)
-        move = [1, 3, 7, 9].detect { |i|
-          !board.taken?(i)
-        }.to_s
+        move = "1"
       elsif !board.taken?(1) && !board.taken?(9)
         move = "9"
       elsif board.taken?(3) && !board.taken?(7)
