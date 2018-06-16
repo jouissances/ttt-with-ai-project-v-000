@@ -15,7 +15,16 @@ module Players
 
       else
         Game::WIN_COMBINATIONS.detect { |combo|
-
+          # WIN_COMBINATIONS = [
+          #   [0, 1, 2],
+          #   [3, 4, 5],
+          #   [6, 7, 8],
+          #   [0, 3, 6],
+          #   [1, 4, 7],
+          #   [2, 5, 8],
+          #   [0, 4, 8],
+          #   [6, 4, 2]
+          # ]
           # First, check whether you have any chances to win, since it doesn't matter whether the opponent has a chance to win if you can win first.
           if combo.select { |i|
             board.position(i + 1) == token
