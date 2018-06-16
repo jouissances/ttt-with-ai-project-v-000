@@ -5,7 +5,9 @@ module Players
       if !board.taken?(5)
         move = "5"
       else
-        [1, 3, 7, 9].sample.to_s
+        [1, 3, 7, 9].detect { |i|
+          !board.taken(i)
+        }.to_s
       end
 
     end
