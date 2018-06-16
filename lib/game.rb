@@ -61,7 +61,7 @@ class Game
       puts "Turn: #{@board.turn_count + 1}"
       board.display
       puts "Please enter 1-9:"
-      board.update(current_move, current_player)
+      board.update(current_move, layer)
       puts "#{player.token} moved #{current_move}"
       board.display
     else
