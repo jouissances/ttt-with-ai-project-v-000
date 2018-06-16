@@ -45,7 +45,7 @@ def start
     board = Board.new
     game = Game.new(player_1 = Players::Computer.new("X"), player_2 = Players::Computer.new("O"))
     100.times.collect {
-      game.play
+      game.play.won?
     }
   else
     start
