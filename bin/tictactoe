@@ -43,4 +43,3 @@ def start
 end
 
 start
-game.play
