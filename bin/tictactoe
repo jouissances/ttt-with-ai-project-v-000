@@ -10,10 +10,9 @@ def welcome
   puts "3. 2-player"
 end
 
-welcome
-input = gets.strip.to_i
-
 def start
+  welcome
+  input = gets.strip.to_i
   if input == 1
     board = Board.new
     game = Game.new(player_1 = Players::Computer.new("X"), player_2 = Players::Computer.new("O"))
