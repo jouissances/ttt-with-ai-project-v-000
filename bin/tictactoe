@@ -6,4 +6,5 @@ game = Game.new
 
 puts "Hi! Welcome to the wonderful world of Tic-Tac-Toe."
 puts "Please enter your first move so we can start the game."
+board.display
 game.play
