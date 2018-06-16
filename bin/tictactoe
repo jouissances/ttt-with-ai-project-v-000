@@ -32,10 +32,6 @@ def start
       game = Game.new(player_1 = Players::Computer.new("X"), player_2 = Players::Human.new("O"))
       board.display
       game.play
-    elsif input == "wargames"
-      board = Board.new
-      game = Game.new(player_1 = Players::Computer.new("X"), player_2 = Players::Computer.new("O"))
-      100.times.game.play
     else
       start
     end
@@ -45,6 +41,10 @@ def start
     puts "Please enter your first move so we can start the game."
     board.display
     game.play
+  elsif input == "wargames"
+    board = Board.new
+    game = Game.new(player_1 = Players::Computer.new("X"), player_2 = Players::Computer.new("O"))
+    100.times.game.play  
   else
     start
   end
