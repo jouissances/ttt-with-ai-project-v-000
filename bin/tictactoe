@@ -13,12 +13,12 @@ end
 
 def start
   welcome
-  input = gets.strip.to_i
-  if input == 1
+  input = gets.strip
+  if input == "1"
     board = Board.new
     game = Game.new(player_1 = Players::Computer.new("X"), player_2 = Players::Computer.new("O"))
     game.play
-  elsif input == 2
+  elsif input == "2"
     board = Board.new
     puts "Who goes first? (h: human / c: computer)"
     input = gets.strip
@@ -35,7 +35,7 @@ def start
     else
       start
     end
-  elsif input == 3
+  elsif input == "3"
     board = Board.new
     game = Game.new(player_1 = Players::Human.new("X"), player_2 = Players::Human.new("O"))
     puts "Please enter your first move so we can start the game."
