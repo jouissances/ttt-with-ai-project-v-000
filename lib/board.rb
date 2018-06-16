@@ -27,8 +27,8 @@ class Board
   end
 
   def turn_count
-    @cells.count { |x|
-      x == "O" || x == "X"
+    @cells.count { |i|
+      i == "O" || i == "X"
     }
   end
 
