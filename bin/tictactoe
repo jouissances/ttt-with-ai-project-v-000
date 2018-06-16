@@ -43,7 +43,7 @@ def start
     board.display
     game.play
   else
-    welcome
+    start
   end
 end
 
