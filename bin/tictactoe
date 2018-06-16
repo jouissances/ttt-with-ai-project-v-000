@@ -17,6 +17,7 @@ def start
   if input == 1
     board = Board.new
     game = Game.new(player_1 = Players::Computer.new("X"), player_2 = Players::Computer.new("O"))
+    game.play
   elsif input == 2
     board = Board.new
     puts "Who goes first? (human / computer)"
@@ -26,8 +27,11 @@ def start
       game = Game.new(player_1 = Players::Human.new("X"), player_2 = Players::Computer.new("O"))
       puts "Please enter your first move so we can start the game."
       board.display
+      game.play
     elsif input == "computer"
       game = Game.new(player_1 = Players::Computer.new("X"), player_2 = Players::Human.new("O"))
+      board.display
+      game.play
     else
       puts "Please try again!"
       welcome
@@ -37,6 +41,7 @@ def start
     game = Game.new(player_1 = Players::Human.new("X"), player_2 = Players::Human.new("O"))
     puts "Please enter your first move so we can start the game."
     board.display
+    game.play
   else
     welcome
   end
