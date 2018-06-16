@@ -3,4 +3,6 @@
 require_relative '../config/environment'
 
 game = Game.new
-puts "Yo"
+
+puts "Hi! Welcome to the wonderful world of Tic-Tac-Toe."
+puts "Please enter your first move so we can start the game."
