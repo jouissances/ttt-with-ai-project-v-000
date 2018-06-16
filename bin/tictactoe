@@ -2,10 +2,27 @@
 
 require_relative '../config/environment'
 
-game = Game.new
-board = Board.new
+def welcome
+  puts "Hi! Welcome to the wonderful world of Tic-Tac-Toe."
+  puts "What kind of game would you like to play?"
+  puts "1. 0-player"
+  puts "2. 1-player"
+  puts "3. 2-player"
+end
 
-puts "Hi! Welcome to the wonderful world of Tic-Tac-Toe."
+welcome
+input = gets.strip.to_i
+
+if input == 1
+  board = Board.new
+  game = Game.new(player_1 = Players::Computer.new("X"), player_2 = Players::Computer.new("O"))
+elsif input == 2
+elsif input == 3
+else
+  welcome
+end
+  
+
 board.display
 puts "Please enter your first move so we can start the game."
 
