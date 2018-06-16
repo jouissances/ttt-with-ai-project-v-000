@@ -2,8 +2,9 @@
 
 require_relative '../config/environment'
 
+puts "Hi! Welcome to the wonderful world of Tic-Tac-Toe."
+
 def welcome
-  puts "Hi! Welcome to the wonderful world of Tic-Tac-Toe."
   puts "What kind of game would you like to play?"
   puts "1. 0-player"
   puts "2. 1-player"
