@@ -44,9 +44,11 @@ def start
   elsif input == "wargames"
     board = Board.new
     game = Game.new(player_1 = Players::Computer.new("X"), player_2 = Players::Computer.new("O"))
+    result = []
     100.times.collect {
-      game.play.won?
+      result << game.play
     }
+    result
   else
     start
   end
