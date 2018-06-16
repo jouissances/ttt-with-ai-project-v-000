@@ -33,7 +33,6 @@ def start
       board.display
       game.play
     else
-      puts "Please try again!"
       start
     end
   elsif input == 3
