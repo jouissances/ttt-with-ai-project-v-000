@@ -37,7 +37,7 @@ module Players
 
           # If you can't play any winning moves, play a move to block the opponent from winning.
           elsif combo.select { |i|
-            board.position(i + 1) != " " && board.position(i+1) != token
+            board.position(i + 1) != " " && board.position(i + 1) != token
           }.size == 2 && combo.any? { |i|
             board.position(i + 1) == " "
           }
