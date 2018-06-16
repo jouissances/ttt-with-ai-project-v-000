@@ -59,9 +59,8 @@ class Game
 
     if board.valid_move?(current_move)
       puts "Turn: #{@board.turn_count + 1}"
-      board.display
       puts "Please enter 1-9:"
-      board.update(current_move, layer)
+      board.update(current_move, player)
       puts "#{player.token} moved #{current_move}"
       board.display
     else
