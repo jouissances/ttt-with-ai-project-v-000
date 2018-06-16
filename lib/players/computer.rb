@@ -3,7 +3,7 @@ module Players
 
     def move(board)
       board.cells.each_index.select { |i| 
-        cells[i] == " "
+        board.cells[i] == " "
       }.sample
     end
 
