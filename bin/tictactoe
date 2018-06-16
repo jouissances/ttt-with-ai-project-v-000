@@ -44,7 +44,7 @@ def start
   elsif input == "wargames"
     board = Board.new
     game = Game.new(player_1 = Players::Computer.new("X"), player_2 = Players::Computer.new("O"))
-    100.times.game.play  
+    game.play  
   else
     start
   end
